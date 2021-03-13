@@ -1,0 +1,7 @@
+@mixin min-max($min-width, $max-width, $padding) {
+   min-width: $min-width;
+   max-width: $max-width;
+   padding: 0 $padding;
+   margin-left: auto;
+   margin-right: auto;
+}
