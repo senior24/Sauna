@@ -2,7 +2,9 @@ body{
    margin: 0;
    padding: 0;
    line-height: 1.5;
-   
+   font-family: "SFProDisplay";
+
+   background-color: #f9efe7;
    //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -18,6 +20,10 @@ h1, h2, h3, h4, h5, h6{
    margin: 0;
 }
 
+p{
+   font-style: normal;
+}
+
 a{
    text-decoration: none;
    display: inline-block;
@@ -30,5 +36,5 @@ ul li{
 }
 
 .container{
-   @include min-max(320px, 1710px, 15px);
+   @include min-max(320px, 1330px, 15px);
 }

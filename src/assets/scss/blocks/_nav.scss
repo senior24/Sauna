@@ -1,0 +1,39 @@
+.nav {
+   padding: 5px;
+   margin-top: 40px;
+
+   background: #FFFFFF;
+   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.17);
+   border-radius: 50px;
+}
+
+.nav__list{
+   display: flex;
+   align-content: center;
+   justify-content: space-between;
+
+   padding-left: 47px;
+   padding-right: 47px;
+
+   border:  1px solid #FAE5DA;
+   border-radius: 50px;
+}
+
+.nav__list-link{
+   padding-top: 20px;
+   padding-bottom: 20px;
+
+   font-family: "Gilroy", sans-serif;
+   font-weight: 400;
+   font-size: 17px;
+   line-height: 1;
+
+   color: #000000;
+
+   transition: color .2s linear;
+
+   &:hover{
+      color: #0092b5;
+   }
+
+}

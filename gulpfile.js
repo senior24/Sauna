@@ -24,17 +24,17 @@ function fonts() {
       .pipe(dest('./dist/assets/fonts/'))
 }
 
-function svgSprites() {
-   return src('./src/assets/img/**.svg')
-      .pipe(svgSprite({
-         mode: {
-            stack: {
-               sprite: "../sprite.svg"
-            }
-         }
-      }))
-      .pipe(dest('./dist/assets/img'))
-}
+// function svgSprites() {
+//    return src('./src/assets/img/**.svg')
+//       .pipe(svgSprite({
+//          mode: {
+//             stack: {
+//                sprite: "../sprite.svg"
+//             }
+//          }
+//       }))
+//       .pipe(dest('./dist/assets/img'))
+// }
 
 
 
@@ -49,7 +49,7 @@ function htmlIncludes() {
 }
 
 function imgToApp() {
-   return src(['./src/assets/img/**.jpg', './src/assets/img/**.png', './src/img/**.jpeg', './src/img/*.ico'])
+   return src(['./src/assets/img/**.jpg', './src/assets/img/**.png', './src/img/**.jpeg', './src/assets/img/**.svg'])
       .pipe(dest('./dist/assets/img'))
 }
 
@@ -135,7 +135,7 @@ const watchFiles = () => {
    watch('./src/assets/img/**.png', imgToApp)
    watch('./src/assets/img/**.jpeg', imgToApp)
    watch('./src/assets/img/*.ico', imgToApp)
-   watch('./src/assets/img/**.svg', svgSprites)
+   watch('./src/assets/img/**.svg', imgToApp)
 
    watch('./src/files/**', files)
 
@@ -145,7 +145,7 @@ const watchFiles = () => {
 }
 
 
-exports.default = series(clean, parallel(htmlIncludes, fonts, files, imgToApp, svgSprites, scripts, styles), watchFiles);
+exports.default = series(clean, parallel(htmlIncludes, fonts, files, imgToApp, /* svgSprites */ scripts, styles), watchFiles);
 
 
 function stylesBuild() {
@@ -199,5 +199,5 @@ function scriptsBuild() {
       .pipe(dest('./dist/assets/js'))
 }
 
-exports.build = series(clean, parallel(htmlIncludes, fonts, files, imgToApp, svgSprites, scriptsBuild, stylesBuild));
+exports.build = series(clean, parallel(htmlIncludes, fonts, files, imgToApp, /* svgSprites */ scriptsBuild, stylesBuild));
 
