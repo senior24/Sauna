@@ -8,7 +8,10 @@
 }
 
 .nav__list{
-   display: flex;
+   // display: flex;
+   display: grid;
+   grid-template-columns: repeat(9, max-content);
+   grid-column-gap: 15px;
    align-content: center;
    justify-content: space-between;
 
@@ -37,3 +40,15 @@
    }
 
 }
+
+ @media (max-width: 1163px) {
+   .nav__list {
+      grid-template-columns: repeat(4, max-content);
+   }
+   .nav__list-link{
+      padding-top: 15px;
+      padding-bottom: 15px;
+   }
+ }
+ 
+ 

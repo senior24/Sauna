@@ -96,3 +96,35 @@
       background-repeat: no-repeat;
    }
 }
+
+
+@media (max-width: 1167px) {
+   .header__info-item{
+      flex-direction: column;
+   }
+
+   .header__info-top-location{
+      margin-left: 0;
+   }
+   
+   .header__info-links{
+      margin-bottom: 10px;
+   }
+}
+
+@media (max-width: 849px) {
+   .header__info{
+      display: block;
+   }
+
+   .header__info-logo {
+      margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 1126px) {
+   .nav__list-link{
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
+}
